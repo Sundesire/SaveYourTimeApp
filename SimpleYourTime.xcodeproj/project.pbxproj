@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF18933E23B4EA0500085E6A /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF18933D23B4EA0500085E6A /* CreateTaskViewController.swift */; };
+		CF1B1C8D23B9D0F500B52154 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B1C8C23B9D0F500B52154 /* AuthViewController.swift */; };
+		CF1B1C9023B9E08D00B52154 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B1C8F23B9E08D00B52154 /* Switcher.swift */; };
 		CFB9FC8F23B478890066B29C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FC8E23B478890066B29C /* AppDelegate.swift */; };
 		CFB9FC9123B478890066B29C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FC9023B478890066B29C /* SceneDelegate.swift */; };
-		CFB9FC9323B478890066B29C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FC9223B478890066B29C /* ViewController.swift */; };
+		CFB9FC9323B478890066B29C /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FC9223B478890066B29C /* TaskViewController.swift */; };
 		CFB9FC9623B478890066B29C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB9FC9423B478890066B29C /* Main.storyboard */; };
 		CFB9FC9823B4788F0066B29C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB9FC9723B4788F0066B29C /* Assets.xcassets */; };
 		CFB9FC9B23B4788F0066B29C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFB9FC9923B4788F0066B29C /* LaunchScreen.storyboard */; };
+		CFB9FCA323B479480066B29C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FCA223B479480066B29C /* PageViewController.swift */; };
+		CFB9FCA523B479EC0066B29C /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FCA423B479EC0066B29C /* ContentViewController.swift */; };
+		CFB9FCAA23B49CBF0066B29C /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FCA923B49CBF0066B29C /* TaskManager.swift */; };
+		CFB9FCAC23B49CE10066B29C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FCAB23B49CE10066B29C /* Task.swift */; };
+		CFBF74FF23B49F4500C1C887 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBF74FE23B49F4500C1C887 /* DataProvider.swift */; };
+		CFBF750623B4B26D00C1C887 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBF750523B4B26D00C1C887 /* TasksTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF18933D23B4EA0500085E6A /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		CF1B1C8C23B9D0F500B52154 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		CF1B1C8F23B9E08D00B52154 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 		CFB9FC8B23B478890066B29C /* SimpleYourTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleYourTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB9FC8E23B478890066B29C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB9FC9023B478890066B29C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CFB9FC9223B478890066B29C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CFB9FC9223B478890066B29C /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		CFB9FC9523B478890066B29C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFB9FC9723B4788F0066B29C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFB9FC9A23B4788F0066B29C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFB9FC9C23B4788F0066B29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFB9FCA223B479480066B29C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		CFB9FCA423B479EC0066B29C /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		CFB9FCA923B49CBF0066B29C /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		CFB9FCAB23B49CE10066B29C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		CFBF74FE23B49F4500C1C887 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		CFBF750523B4B26D00C1C887 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF1B1C8E23B9E07C00B52154 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CF1B1C8F23B9E08D00B52154 /* Switcher.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		CFB9FC8223B478890066B29C = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +82,56 @@
 		CFB9FC8D23B478890066B29C /* SimpleYourTime */ = {
 			isa = PBXGroup;
 			children = (
-				CFB9FC8E23B478890066B29C /* AppDelegate.swift */,
-				CFB9FC9023B478890066B29C /* SceneDelegate.swift */,
-				CFB9FC9223B478890066B29C /* ViewController.swift */,
 				CFB9FC9423B478890066B29C /* Main.storyboard */,
+				CFBF750023B4A36100C1C887 /* Model */,
+				CFBF750423B4B25300C1C887 /* View */,
+				CFBF750323B4B20900C1C887 /* Controller */,
+				CFBF74FE23B49F4500C1C887 /* DataProvider.swift */,
+				CFB9FCA623B484000066B29C /* PageView */,
+				CF1B1C8E23B9E07C00B52154 /* Helpers */,
 				CFB9FC9723B4788F0066B29C /* Assets.xcassets */,
 				CFB9FC9923B4788F0066B29C /* LaunchScreen.storyboard */,
 				CFB9FC9C23B4788F0066B29C /* Info.plist */,
+				CFB9FC8E23B478890066B29C /* AppDelegate.swift */,
+				CFB9FC9023B478890066B29C /* SceneDelegate.swift */,
 			);
 			path = SimpleYourTime;
+			sourceTree = "<group>";
+		};
+		CFB9FCA623B484000066B29C /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				CFB9FCA423B479EC0066B29C /* ContentViewController.swift */,
+				CFB9FCA223B479480066B29C /* PageViewController.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		CFBF750023B4A36100C1C887 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFB9FCA923B49CBF0066B29C /* TaskManager.swift */,
+				CFB9FCAB23B49CE10066B29C /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFBF750323B4B20900C1C887 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF18933D23B4EA0500085E6A /* CreateTaskViewController.swift */,
+				CFB9FC9223B478890066B29C /* TaskViewController.swift */,
+				CF1B1C8C23B9D0F500B52154 /* AuthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFBF750423B4B25300C1C887 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFBF750523B4B26D00C1C887 /* TasksTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +205,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB9FC9323B478890066B29C /* ViewController.swift in Sources */,
+				CFB9FCA523B479EC0066B29C /* ContentViewController.swift in Sources */,
+				CFB9FC9323B478890066B29C /* TaskViewController.swift in Sources */,
+				CF1B1C9023B9E08D00B52154 /* Switcher.swift in Sources */,
+				CF18933E23B4EA0500085E6A /* CreateTaskViewController.swift in Sources */,
 				CFB9FC8F23B478890066B29C /* AppDelegate.swift in Sources */,
+				CFB9FCAA23B49CBF0066B29C /* TaskManager.swift in Sources */,
 				CFB9FC9123B478890066B29C /* SceneDelegate.swift in Sources */,
+				CFBF750623B4B26D00C1C887 /* TasksTableViewCell.swift in Sources */,
+				CFBF74FF23B49F4500C1C887 /* DataProvider.swift in Sources */,
+				CFB9FCA323B479480066B29C /* PageViewController.swift in Sources */,
+				CFB9FCAC23B49CE10066B29C /* Task.swift in Sources */,
+				CF1B1C8D23B9D0F500B52154 /* AuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

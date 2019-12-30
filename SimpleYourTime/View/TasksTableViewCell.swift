@@ -9,16 +9,29 @@
 import UIKit
 
 class TasksTableViewCell: UITableViewCell {
+    
+    static let reuseId = "TaskCell"
 
+    @IBOutlet weak var taskTitle: UILabel!
+    @IBOutlet weak var taskCategory: UILabel!
+    @IBOutlet weak var taskTimeFrom: UILabel!
+    @IBOutlet weak var taskTimeTo: UILabel!
+    @IBOutlet weak var taskView: UIView!
+    
+    
+    func configure(withTask task: Task) {
+        self.taskTitle.text = task.task
+        self.taskCategory.text = task.category
+        self.taskTimeFrom.text = task.dateFrom
+        self.taskTimeTo.text = task.dateTo
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+       super.awakeFromNib()
+       //custom logic goes here
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

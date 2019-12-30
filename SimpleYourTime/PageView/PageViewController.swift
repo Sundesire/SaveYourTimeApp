@@ -23,22 +23,17 @@ class PageViewController: UIPageViewController {
     
     func displayViewController(atIndex index: Int) -> ContentViewController? {
         guard index >= 0 else { return nil}
-        guard index < titleArray.count else { return nil }
+        guard index < titleArray.count else {
+            return nil
+        }
         
         guard let contentVC = storyboard?.instantiateViewController(withIdentifier: "contentViewController") as? ContentViewController else { return nil}
         contentVC.label = titleArray[index]
         print("contentVC label: \(contentVC.label)")
-
 //        contentVC.imageFile = imagesArray[index]
         contentVC.index = index
         return contentVC
-    }
-    func dismissPresentation() {
-        let userDefaults = UserDefaults.standard
-        userDefaults.set(true, forKey: "PresentationWasViewed")
-        dismiss(animated: true, completion: nil)
-    }
-    
+    }    
 }
 
 extension PageViewController: UIPageViewControllerDataSource {

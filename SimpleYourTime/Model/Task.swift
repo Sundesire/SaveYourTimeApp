@@ -11,10 +11,10 @@ import Foundation
 struct Task {
     var task: String
     var category: String
-    var dateFrom: Date
-    var dateTo: Date
+    var dateFrom: String
+    var dateTo: String
 
-    init(task: String, category: String, dateFrom: Date, dateTo: Date) {
+    init(task: String, category: String, dateFrom: String, dateTo: String) {
         self.task = task
         self.category = category
         self.dateFrom = dateFrom
