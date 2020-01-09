@@ -28,7 +28,7 @@ extension CreateTaskViewController {
         taskTF.backgroundColor = #colorLiteral(red: 0.2345589697, green: 0.2587072849, blue: 0.2712723017, alpha: 1)
         taskTF.textColor = #colorLiteral(red: 0, green: 0.8620880246, blue: 0.7615700364, alpha: 1)
         taskTF.placeholder = "Введите задачу"
-        taskTF.attributedPlaceholder = NSAttributedString(string: "Введите задачу", attributes: [.foregroundColor: UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.3510690331, blue: 0.330260694, alpha: 1))])
+        taskTF.attributedPlaceholder = NSAttributedString(string: "Введите задачу", attributes: [.foregroundColor: UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 0.7023820936))])
         taskTF.autocapitalizationType = .sentences
     }
 

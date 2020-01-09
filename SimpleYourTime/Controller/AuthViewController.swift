@@ -21,13 +21,11 @@ class AuthViewController: UIViewController {
         displayWalkthrough()
     }
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        
-        UserDefaults.standard.set(true, forKey: "status")
-        Switcher.updateRootVC()
+
     }
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
-        print(#function)
+
     }
 }
 

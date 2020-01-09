@@ -3,13 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CFA2A35E0B290E65F34CF9A /* Pods_SimpleYourTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7041819DAC56920B8B524462 /* Pods_SimpleYourTime.framework */; };
 		CF18933E23B4EA0500085E6A /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF18933D23B4EA0500085E6A /* CreateTaskViewController.swift */; };
 		CF1B1C8D23B9D0F500B52154 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B1C8C23B9D0F500B52154 /* AuthViewController.swift */; };
 		CF1B1C9023B9E08D00B52154 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B1C8F23B9E08D00B52154 /* Switcher.swift */; };
+		CF4B204823C703960038EFEA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B204723C703960038EFEA /* RegisterViewController.swift */; };
+		CF4B204A23C7088B0038EFEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF4B204923C7088B0038EFEA /* GoogleService-Info.plist */; };
 		CFB9FC8F23B478890066B29C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FC8E23B478890066B29C /* AppDelegate.swift */; };
 		CFB9FC9123B478890066B29C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FC9023B478890066B29C /* SceneDelegate.swift */; };
 		CFB9FC9323B478890066B29C /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FC9223B478890066B29C /* TaskViewController.swift */; };
@@ -22,12 +25,21 @@
 		CFB9FCAC23B49CE10066B29C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FCAB23B49CE10066B29C /* Task.swift */; };
 		CFBF74FF23B49F4500C1C887 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBF74FE23B49F4500C1C887 /* DataProvider.swift */; };
 		CFBF750623B4B26D00C1C887 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBF750523B4B26D00C1C887 /* TasksTableViewCell.swift */; };
+		CFFAC2B723C710AB002A9F71 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFAC2B623C710AB002A9F71 /* LoginViewController.swift */; };
+		CFFAC2B923C720ED002A9F71 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFAC2B823C720ED002A9F71 /* Validators.swift */; };
+		CFFAC2BB23C722D6002A9F71 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFAC2BA23C722D6002A9F71 /* AuthError.swift */; };
+		CFFAC2BD23C7256E002A9F71 /* UIAlertController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFAC2BC23C7256E002A9F71 /* UIAlertController + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		278F1DE0AF01AD97DA11D4D5 /* Pods-SimpleYourTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleYourTime.debug.xcconfig"; path = "Target Support Files/Pods-SimpleYourTime/Pods-SimpleYourTime.debug.xcconfig"; sourceTree = "<group>"; };
+		6A0CA08A1D1AA4AE08BF49CD /* Pods-SimpleYourTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleYourTime.release.xcconfig"; path = "Target Support Files/Pods-SimpleYourTime/Pods-SimpleYourTime.release.xcconfig"; sourceTree = "<group>"; };
+		7041819DAC56920B8B524462 /* Pods_SimpleYourTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleYourTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF18933D23B4EA0500085E6A /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		CF1B1C8C23B9D0F500B52154 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		CF1B1C8F23B9E08D00B52154 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
+		CF4B204723C703960038EFEA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CF4B204923C7088B0038EFEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFB9FC8B23B478890066B29C /* SimpleYourTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleYourTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB9FC8E23B478890066B29C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB9FC9023B478890066B29C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +54,10 @@
 		CFB9FCAB23B49CE10066B29C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		CFBF74FE23B49F4500C1C887 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		CFBF750523B4B26D00C1C887 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
+		CFFAC2B623C710AB002A9F71 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CFFAC2B823C720ED002A9F71 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
+		CFFAC2BA23C722D6002A9F71 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		CFFAC2BC23C7256E002A9F71 /* UIAlertController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,16 +65,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFA2A35E0B290E65F34CF9A /* Pods_SimpleYourTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B2146540F9B61F7287F8A47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				278F1DE0AF01AD97DA11D4D5 /* Pods-SimpleYourTime.debug.xcconfig */,
+				6A0CA08A1D1AA4AE08BF49CD /* Pods-SimpleYourTime.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		79D685AA43E15EB2F876448F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7041819DAC56920B8B524462 /* Pods_SimpleYourTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF1B1C8E23B9E07C00B52154 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				CF1B1C8F23B9E08D00B52154 /* Switcher.swift */,
+				CFFAC2B823C720ED002A9F71 /* Validators.swift */,
+				CFFAC2BA23C722D6002A9F71 /* AuthError.swift */,
+				CFFAC2BC23C7256E002A9F71 /* UIAlertController + Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -68,6 +105,8 @@
 			children = (
 				CFB9FC8D23B478890066B29C /* SimpleYourTime */,
 				CFB9FC8C23B478890066B29C /* Products */,
+				2B2146540F9B61F7287F8A47 /* Pods */,
+				79D685AA43E15EB2F876448F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +131,7 @@
 				CFB9FC9723B4788F0066B29C /* Assets.xcassets */,
 				CFB9FC9923B4788F0066B29C /* LaunchScreen.storyboard */,
 				CFB9FC9C23B4788F0066B29C /* Info.plist */,
+				CF4B204923C7088B0038EFEA /* GoogleService-Info.plist */,
 				CFB9FC8E23B478890066B29C /* AppDelegate.swift */,
 				CFB9FC9023B478890066B29C /* SceneDelegate.swift */,
 			);
@@ -122,6 +162,8 @@
 				CF18933D23B4EA0500085E6A /* CreateTaskViewController.swift */,
 				CFB9FC9223B478890066B29C /* TaskViewController.swift */,
 				CF1B1C8C23B9D0F500B52154 /* AuthViewController.swift */,
+				CF4B204723C703960038EFEA /* RegisterViewController.swift */,
+				CFFAC2B623C710AB002A9F71 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFB9FC9F23B4788F0066B29C /* Build configuration list for PBXNativeTarget "SimpleYourTime" */;
 			buildPhases = (
+				6345F6EE977D6BD439D2312B /* [CP] Check Pods Manifest.lock */,
 				CFB9FC8723B478890066B29C /* Sources */,
 				CFB9FC8823B478890066B29C /* Frameworks */,
 				CFB9FC8923B478890066B29C /* Resources */,
+				DF6C79F9E47EC420E6F6046E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFB9FC9B23B4788F0066B29C /* LaunchScreen.storyboard in Resources */,
+				CF4B204A23C7088B0038EFEA /* GoogleService-Info.plist in Resources */,
 				CFB9FC9823B4788F0066B29C /* Assets.xcassets in Resources */,
 				CFB9FC9623B478890066B29C /* Main.storyboard in Resources */,
 			);
@@ -200,21 +245,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6345F6EE977D6BD439D2312B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleYourTime-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF6C79F9E47EC420E6F6046E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleYourTime/Pods-SimpleYourTime-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleYourTime/Pods-SimpleYourTime-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleYourTime/Pods-SimpleYourTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CFB9FC8723B478890066B29C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFAC2B723C710AB002A9F71 /* LoginViewController.swift in Sources */,
 				CFB9FCA523B479EC0066B29C /* ContentViewController.swift in Sources */,
 				CFB9FC9323B478890066B29C /* TaskViewController.swift in Sources */,
 				CF1B1C9023B9E08D00B52154 /* Switcher.swift in Sources */,
 				CF18933E23B4EA0500085E6A /* CreateTaskViewController.swift in Sources */,
+				CFFAC2BD23C7256E002A9F71 /* UIAlertController + Extension.swift in Sources */,
 				CFB9FC8F23B478890066B29C /* AppDelegate.swift in Sources */,
+				CFFAC2BB23C722D6002A9F71 /* AuthError.swift in Sources */,
 				CFB9FCAA23B49CBF0066B29C /* TaskManager.swift in Sources */,
 				CFB9FC9123B478890066B29C /* SceneDelegate.swift in Sources */,
+				CFFAC2B923C720ED002A9F71 /* Validators.swift in Sources */,
 				CFBF750623B4B26D00C1C887 /* TasksTableViewCell.swift in Sources */,
 				CFBF74FF23B49F4500C1C887 /* DataProvider.swift in Sources */,
 				CFB9FCA323B479480066B29C /* PageViewController.swift in Sources */,
+				CF4B204823C703960038EFEA /* RegisterViewController.swift in Sources */,
 				CFB9FCAC23B49CE10066B29C /* Task.swift in Sources */,
 				CF1B1C8D23B9D0F500B52154 /* AuthViewController.swift in Sources */,
 			);
@@ -358,6 +450,7 @@
 		};
 		CFB9FCA023B4788F0066B29C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 278F1DE0AF01AD97DA11D4D5 /* Pods-SimpleYourTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +469,7 @@
 		};
 		CFB9FCA123B4788F0066B29C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A0CA08A1D1AA4AE08BF49CD /* Pods-SimpleYourTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
