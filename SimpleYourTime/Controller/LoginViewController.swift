@@ -20,13 +20,40 @@ class LoginViewController: UIViewController {
         setUpStartView()
     }
 
+    func login(email: String?, password: String?, completion: @escaping (AuthResult)-> Void) {
+        
+        guard Validators.isFIlled(firstName: "Foo", lastName: "Baz", email: email, password: password) else {
+            completion(.failure(AuthError.notFilled))
+            return
+        }
+        
+        guard let email = email, let password = password else {
+            completion(.failure(AuthError.unknownError))
+            return
+        }
+        
+        guard Validators.isSimpleEmail(email) else {
+            completion(.failure(AuthError.invalidEmail))
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            guard let _ = result else {
+                completion(.failure(error!))
+                return
+            }
+            completion(.sucess)
+        }
+    }
+    
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
-            if error != nil {
-                print("Error sign in")
-            } else {
+        login(email: emailTextField.text, password: passwordTextField.text) { (result) in
+            switch result {
+            case .sucess:
                 UserDefaults.standard.set(true, forKey: "status")
                 Switcher.updateRootVC()
+            case .failure(let error):
+                self.showAlert(with: "Ошибка", message: error.localizedDescription)
             }
         }
     }

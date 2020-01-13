@@ -13,6 +13,7 @@
 		CF1B1C9023B9E08D00B52154 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B1C8F23B9E08D00B52154 /* Switcher.swift */; };
 		CF4B204823C703960038EFEA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B204723C703960038EFEA /* RegisterViewController.swift */; };
 		CF4B204A23C7088B0038EFEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF4B204923C7088B0038EFEA /* GoogleService-Info.plist */; };
+		CFA5132623CC5A9900B65844 /* Leveling.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA5132523CC5A9900B65844 /* Leveling.swift */; };
 		CFB9FC8F23B478890066B29C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FC8E23B478890066B29C /* AppDelegate.swift */; };
 		CFB9FC9123B478890066B29C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FC9023B478890066B29C /* SceneDelegate.swift */; };
 		CFB9FC9323B478890066B29C /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FC9223B478890066B29C /* TaskViewController.swift */; };
@@ -40,6 +41,7 @@
 		CF1B1C8F23B9E08D00B52154 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 		CF4B204723C703960038EFEA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CF4B204923C7088B0038EFEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CFA5132523CC5A9900B65844 /* Leveling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leveling.swift; sourceTree = "<group>"; };
 		CFB9FC8B23B478890066B29C /* SimpleYourTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleYourTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB9FC8E23B478890066B29C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFB9FC9023B478890066B29C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				CFFAC2B823C720ED002A9F71 /* Validators.swift */,
 				CFFAC2BA23C722D6002A9F71 /* AuthError.swift */,
 				CFFAC2BC23C7256E002A9F71 /* UIAlertController + Extension.swift */,
+				CFA5132523CC5A9900B65844 /* Leveling.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				CFB9FCAA23B49CBF0066B29C /* TaskManager.swift in Sources */,
 				CFB9FC9123B478890066B29C /* SceneDelegate.swift in Sources */,
 				CFFAC2B923C720ED002A9F71 /* Validators.swift in Sources */,
+				CFA5132623CC5A9900B65844 /* Leveling.swift in Sources */,
 				CFBF750623B4B26D00C1C887 /* TasksTableViewCell.swift in Sources */,
 				CFBF74FF23B49F4500C1C887 /* DataProvider.swift in Sources */,
 				CFB9FCA323B479480066B29C /* PageViewController.swift in Sources */,

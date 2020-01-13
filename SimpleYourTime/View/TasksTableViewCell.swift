@@ -22,8 +22,8 @@ class TasksTableViewCell: UITableViewCell {
     func configure(withTask task: Task) {
         self.taskTitle.text = task.task
         self.taskCategory.text = task.category
-        self.taskTimeFrom.text = task.dateFrom
-        self.taskTimeTo.text = task.dateTo
+        self.taskTimeFrom.text = "C \(task.dateFrom)"
+        self.taskTimeTo.text = "До \(task.dateTo)"
     }
     
     required init?(coder: NSCoder) {

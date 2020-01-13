@@ -23,10 +23,7 @@ class RegisterViewController: UIViewController {
         //errorLabel.alpha = 0
     }
     
-    enum AuthResult {
-        case sucess
-        case failure(Error)
-    }
+
     
     func register(email: String?, password: String?, completion: @escaping (AuthResult) -> Void) {
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TaskViewController: UIViewController {
     
@@ -77,7 +78,12 @@ extension TaskViewController {
     }
     
     @objc func exitFromApp() {
-        UserDefaults.standard.set(false, forKey: "status")
-        Switcher.updateRootVC()
+        do {
+            try Auth.auth().signOut()
+            UserDefaults.standard.set(false, forKey: "status")
+            Switcher.updateRootVC()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
 }

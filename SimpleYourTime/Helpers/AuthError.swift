@@ -15,6 +15,11 @@ enum AuthError {
     case serverError
 }
 
+enum AuthResult {
+    case sucess
+    case failure(Error)
+}
+
 extension AuthError: LocalizedError {
     var errorDescription: String? {
         switch self {
