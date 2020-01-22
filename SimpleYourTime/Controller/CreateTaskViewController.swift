@@ -30,7 +30,7 @@ class CreateTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.152451545, green: 0.1685512364, blue: 0.1769267023, alpha: 1)
-
+        
         setUpNavigationBar()
         startSettings()
         showDatePicker()
@@ -46,7 +46,7 @@ class CreateTaskViewController: UIViewController {
         content.sound = UNNotificationSound.default
         content.threadIdentifier = "local-notification temp"
         content.badge = 1
-
+        
         let date = dateFrom
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
@@ -60,24 +60,27 @@ class CreateTaskViewController: UIViewController {
     }
     
     @IBAction func SaveButton(_ sender: UIButton) {
-//        let db = Firestore.firestore()
-
+        let db = Firestore.firestore()
+        
         guard taskTF.text != "", categoryTF.text != "", timeFromTF.text != "", timeToTF.text != "" else { return }
         guard let task = taskTF.text, let category = categoryTF.text, let timeFrom = timeFromTF.text, let timeTo = timeToTF.text else { return }
         let newTask = Task(task: task, category: category, dateFrom: timeFrom, dateTo: timeTo)
         self.taskManager.add(task: newTask)
-//        db.collection("users").document("tasks").setData([
+        
+        
+//        db.collection("users").document(id).collection("tasks").document().setData([
 //            "task": task,
 //            "category": category,
 //            "timeFrom": timeFrom,
 //            "timeTo": timeTo
-//        ])  { error in
-//            if let error = error {
-//                print("Error writing document: \(error)")
-//            } else {
-//                print("Document successfully written!")
-//            }
+//            ]) { error in
+//                if let error = error {
+//                    print("Error writing document: \(error)")
+//                } else {
+//                    print("Document successfully written!")
+//                }
 //        }
+        
         
         print(newTask)
         

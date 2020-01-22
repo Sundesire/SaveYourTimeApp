@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -355,8 +355,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="CB0-dE-cE6" id="EfV-Ku-1fx"/>
-                                    <outlet property="delegate" destination="CB0-dE-cE6" id="6wU-Jg-dtJ"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2WG-ls-yZQ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gdq-O8-1Qx"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -371,12 +371,10 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="p1i-nd-JRb"/>
                     <connections>
-                        <outlet property="dataProvider" destination="CB0-dE-cE6" id="hQr-Jp-hZu"/>
                         <outlet property="tableView" destination="wRd-uP-b4O" id="atJ-Z3-zYW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="CB0-dE-cE6" customClass="DataProvider" customModule="SimpleYourTime" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="2285.507246376812" y="115.84821428571428"/>
         </scene>
