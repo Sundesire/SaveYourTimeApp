@@ -32,7 +32,9 @@ class TaskViewController: UIViewController {
         tableView.backgroundColor = .clear
         taskManager = TaskManager()
         tableView.backgroundColor = .clear
-        
+        getTask { (task) in
+            print("sucess")
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -41,6 +43,31 @@ class TaskViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+    
+    func getTask(completion: @escaping (Task) -> Void) {
+        let db = Firestore.firestore()
+        let id = Auth.auth().currentUser?.uid
+        
+        db.collection("users").document(id!).collection("tasks").getDocuments {[weak self] (document, error) in
+            if let error = error {
+                
+            } else {
+                for document in document!.documents {
+                    let data = document.data()
+                    let task = data["task"] as! String
+                    let category = data["category"] as! String
+                    let dateFrom = data["timeFrom"] as! String
+                    let dateTo = data["timeTo"] as! String
+                    let newTask = Task(task: task, category: category, dateFrom: dateFrom, dateTo: dateTo)
+                    self?.taskManager.add(task: newTask)
+                    self?.taskManager.tasks.sort{ $0.dateFrom < $1.dateFrom }
+                }
+            }
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
     }
 }
 
@@ -92,10 +119,11 @@ extension TaskViewController {
 
 extension TaskViewController {
     
-    func openModalWindow() {
+    func openModalWindow(task: Task) {
         let child = TaskInfoViewController()
         child.transitioningDelegate = transition
         child.modalPresentationStyle = .custom
+        child.taskLabel.text = task.task
         present(child, animated: true)
     }
 }
@@ -109,22 +137,20 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TasksTableViewCell.reuseId, for: indexPath) as? TasksTableViewCell
-        guard let taskManager = taskManager else { fatalError() }
-        let task: Task
-        task = taskManager.task(at: indexPath.row)
+        let task = createTask(indexPath: indexPath)
         cell?.configure(withTask: task)
-        cell?.backgroundColor = .clear
-        cell?.taskTitle.textColor = #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1)
-        cell?.taskCategory.textColor = #colorLiteral(red: 0.1650192738, green: 0.6711024642, blue: 0.8877368569, alpha: 1)
-        cell?.taskTimeTo.textColor = #colorLiteral(red: 1, green: 0.3510690331, blue: 0.330260694, alpha: 1)
-        cell?.taskTimeFrom.textColor = #colorLiteral(red: 1, green: 0.3510690331, blue: 0.330260694, alpha: 1)
-        cell?.taskView.backgroundColor = #colorLiteral(red: 0.2352941176, green: 0.2588235294, blue: 0.2705882353, alpha: 1)
-        cell?.taskView.layer.cornerRadius = 10
-        cell?.selectionStyle = .none
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        openModalWindow()
+        let task = createTask(indexPath: indexPath)
+        openModalWindow(task: task)
+    }
+    
+    func createTask(indexPath: IndexPath) -> Task {
+        guard let taskManager = taskManager else { fatalError() }
+        let task: Task
+        task = taskManager.task(at: indexPath.row)
+        return task
     }
 }

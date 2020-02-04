@@ -52,7 +52,9 @@ class RegisterViewController: UIViewController {
             }
             
             let db = Firestore.firestore()
-            db.collection("users").addDocument(data: [
+            let id = Auth.auth().currentUser?.uid
+            
+            db.collection("users").document(id!).setData([
                 "firstName": self.firstNameTextField.text!,
                 "lastName": self.lastNameTextField.text!,
                 "uid": result!.user.uid
@@ -63,6 +65,7 @@ class RegisterViewController: UIViewController {
                 completion(.sucess)
             }
         }
+        
     }
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {

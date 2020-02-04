@@ -19,6 +19,7 @@
 		CF31846D23D837FE009F0D4C /* DismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF31846C23D837FE009F0D4C /* DismissAnimation.swift */; };
 		CF4B204823C703960038EFEA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4B204723C703960038EFEA /* RegisterViewController.swift */; };
 		CF4B204A23C7088B0038EFEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF4B204923C7088B0038EFEA /* GoogleService-Info.plist */; };
+		CF5CE99023E15494009E1C14 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5CE98F23E15494009E1C14 /* SettingsViewController.swift */; };
 		CFA5132623CC5A9900B65844 /* Leveling.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA5132523CC5A9900B65844 /* Leveling.swift */; };
 		CFB9FC8F23B478890066B29C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FC8E23B478890066B29C /* AppDelegate.swift */; };
 		CFB9FC9123B478890066B29C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FC9023B478890066B29C /* SceneDelegate.swift */; };
@@ -31,6 +32,9 @@
 		CFB9FCAA23B49CBF0066B29C /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FCA923B49CBF0066B29C /* TaskManager.swift */; };
 		CFB9FCAC23B49CE10066B29C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9FCAB23B49CE10066B29C /* Task.swift */; };
 		CFBF750623B4B26D00C1C887 /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBF750523B4B26D00C1C887 /* TasksTableViewCell.swift */; };
+		CFF0AF9123D86D1A003FEDD8 /* TransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0AF9023D86D1A003FEDD8 /* TransitionDriver.swift */; };
+		CFF0AF9323D871D8003FEDD8 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0AF9223D871D8003FEDD8 /* Math.swift */; };
+		CFF0AF9523D8736F003FEDD8 /* TransitionDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF0AF9423D8736F003FEDD8 /* TransitionDirection.swift */; };
 		CFFAC2B723C710AB002A9F71 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFAC2B623C710AB002A9F71 /* LoginViewController.swift */; };
 		CFFAC2B923C720ED002A9F71 /* Validators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFAC2B823C720ED002A9F71 /* Validators.swift */; };
 		CFFAC2BB23C722D6002A9F71 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFAC2BA23C722D6002A9F71 /* AuthError.swift */; };
@@ -52,6 +56,7 @@
 		CF31846C23D837FE009F0D4C /* DismissAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimation.swift; sourceTree = "<group>"; };
 		CF4B204723C703960038EFEA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CF4B204923C7088B0038EFEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CF5CE98F23E15494009E1C14 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CFA5132523CC5A9900B65844 /* Leveling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leveling.swift; sourceTree = "<group>"; };
 		CFB9FC8B23B478890066B29C /* SimpleYourTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleYourTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB9FC8E23B478890066B29C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +71,9 @@
 		CFB9FCA923B49CBF0066B29C /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		CFB9FCAB23B49CE10066B29C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		CFBF750523B4B26D00C1C887 /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
+		CFF0AF9023D86D1A003FEDD8 /* TransitionDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDriver.swift; sourceTree = "<group>"; };
+		CFF0AF9223D871D8003FEDD8 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		CFF0AF9423D8736F003FEDD8 /* TransitionDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDirection.swift; sourceTree = "<group>"; };
 		CFFAC2B623C710AB002A9F71 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CFFAC2B823C720ED002A9F71 /* Validators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validators.swift; sourceTree = "<group>"; };
 		CFFAC2BA23C722D6002A9F71 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
@@ -116,11 +124,14 @@
 		CF31846E23D83977009F0D4C /* ModalWindowAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				CFF0AF9223D871D8003FEDD8 /* Math.swift */,
 				CF31846423D83456009F0D4C /* PanelTranssition.swift */,
 				CF31846C23D837FE009F0D4C /* DismissAnimation.swift */,
+				CFF0AF9023D86D1A003FEDD8 /* TransitionDriver.swift */,
 				CF31846A23D837CC009F0D4C /* PresentAnimation.swift */,
 				CF31846623D83543009F0D4C /* PresentationController.swift */,
 				CF31846823D8363F009F0D4C /* DimmPresentationController.swift */,
+				CFF0AF9423D8736F003FEDD8 /* TransitionDirection.swift */,
 			);
 			path = ModalWindowAnimation;
 			sourceTree = "<group>";
@@ -188,6 +199,7 @@
 				CFB9FC9223B478890066B29C /* TaskViewController.swift */,
 				CF1B1C8C23B9D0F500B52154 /* AuthViewController.swift */,
 				CF4B204723C703960038EFEA /* RegisterViewController.swift */,
+				CF5CE98F23E15494009E1C14 /* SettingsViewController.swift */,
 				CFFAC2B623C710AB002A9F71 /* LoginViewController.swift */,
 				CF31846223D83348009F0D4C /* TaskInfoViewController.swift */,
 			);
@@ -318,10 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF0AF9123D86D1A003FEDD8 /* TransitionDriver.swift in Sources */,
 				CFFAC2B723C710AB002A9F71 /* LoginViewController.swift in Sources */,
 				CFB9FCA523B479EC0066B29C /* ContentViewController.swift in Sources */,
 				CF31846B23D837CC009F0D4C /* PresentAnimation.swift in Sources */,
+				CFF0AF9323D871D8003FEDD8 /* Math.swift in Sources */,
 				CF31846723D83543009F0D4C /* PresentationController.swift in Sources */,
+				CFF0AF9523D8736F003FEDD8 /* TransitionDirection.swift in Sources */,
 				CFB9FC9323B478890066B29C /* TaskViewController.swift in Sources */,
 				CF31846D23D837FE009F0D4C /* DismissAnimation.swift in Sources */,
 				CF1B1C9023B9E08D00B52154 /* Switcher.swift in Sources */,
@@ -341,6 +356,7 @@
 				CF4B204823C703960038EFEA /* RegisterViewController.swift in Sources */,
 				CFB9FCAC23B49CE10066B29C /* Task.swift in Sources */,
 				CF1B1C8D23B9D0F500B52154 /* AuthViewController.swift in Sources */,
+				CF5CE99023E15494009E1C14 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -60,27 +60,13 @@ class CreateTaskViewController: UIViewController {
     }
     
     @IBAction func SaveButton(_ sender: UIButton) {
-        let db = Firestore.firestore()
+        
         
         guard taskTF.text != "", categoryTF.text != "", timeFromTF.text != "", timeToTF.text != "" else { return }
         guard let task = taskTF.text, let category = categoryTF.text, let timeFrom = timeFromTF.text, let timeTo = timeToTF.text else { return }
         let newTask = Task(task: task, category: category, dateFrom: timeFrom, dateTo: timeTo)
         self.taskManager.add(task: newTask)
-        
-        
-//        db.collection("users").document(id).collection("tasks").document().setData([
-//            "task": task,
-//            "category": category,
-//            "timeFrom": timeFrom,
-//            "timeTo": timeTo
-//            ]) { error in
-//                if let error = error {
-//                    print("Error writing document: \(error)")
-//                } else {
-//                    print("Document successfully written!")
-//                }
-//        }
-        
+        saveToFirebase(task: newTask)
         
         print(newTask)
         
@@ -94,6 +80,26 @@ class CreateTaskViewController: UIViewController {
         DispatchQueue.main.async {
             self.navigationController?.popViewController(animated: true)
         }
+    }
+    
+    func saveToFirebase(task: Task) {
+        let db = Firestore.firestore()
+        let id = Auth.auth().currentUser?.uid
+        
+        db.collection("users").document(id!).collection("tasks").addDocument(data:[
+            "task": task.task,
+            "category": task.category,
+            "timeFrom": task.dateFrom,
+            "timeTo": task.dateTo
+            ]) { error in
+                if let error = error {
+                    print("Error writing document: \(error)")
+                } else {
+                    print("Document successfully written!")
+                }
+        }
+        
+        
     }
     
 }

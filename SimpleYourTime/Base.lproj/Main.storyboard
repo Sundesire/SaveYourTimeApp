@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QU8-uY-WSl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -262,7 +262,7 @@
             </objects>
             <point key="canvasLocation" x="339.13043478260875" y="115.84821428571428"/>
         </scene>
-        <!--Task View Controller-->
+        <!--Задачи-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="taskViewController" id="BYZ-38-t0r" customClass="TaskViewController" customModule="SimpleYourTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -271,7 +271,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wRd-uP-b4O">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" rowHeight="100" id="hON-x1-xxQ" customClass="TasksTableViewCell" customModule="SimpleYourTime" customModuleProvider="target">
@@ -369,6 +369,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Задачи" image="TasksIcon" selectedImage="TasksIconColored" id="43O-Z1-I2a"/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="p1i-nd-JRb"/>
                     <connections>
                         <outlet property="tableView" destination="wRd-uP-b4O" id="atJ-Z3-zYW"/>
@@ -376,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2285.507246376812" y="115.84821428571428"/>
+            <point key="canvasLocation" x="3275" y="-172"/>
         </scene>
         <!--Create Task View Controller-->
         <scene sceneID="c27-eb-cjJ">
@@ -475,7 +476,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgQ-qY-xj2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3134.7826086956525" y="115.84821428571428"/>
+            <point key="canvasLocation" x="4125" y="-172"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="BxF-ej-9DR">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QU8-uY-WSl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DIu-kT-1dr">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="w8N-Eb-oCG"/>
+                        <segue destination="cZb-VJ-tGA" kind="relationship" relationship="viewControllers" id="Zrx-gJ-wMs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbD-JF-HPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2285.507246376812" y="115.84821428571428"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="XUM-Lh-FPP">
+            <objects>
+                <viewController id="cZb-VJ-tGA" customClass="SettingsViewController" customModule="SimpleYourTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OOS-nd-PBj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Q9M-SY-1EW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Настройки" image="SettingsIcon" selectedImage="SettingsIconColored" id="uUq-5k-IWz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9vr-5V-13H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3274" y="477"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SettingsIcon" width="27" height="27"/>
+        <image name="SettingsIconColored" width="27" height="27"/>
+        <image name="TasksIcon" width="25" height="25"/>
+        <image name="TasksIconColored" width="25" height="25"/>
+    </resources>
 </document>

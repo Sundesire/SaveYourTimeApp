@@ -12,8 +12,9 @@ import UIKit
 class PresentationController: UIPresentationController {
     override var frameOfPresentedViewInContainerView: CGRect {
         let bounds = containerView!.bounds
-        let halfHeigh = bounds.height / 2
-        return CGRect(x: 0, y: halfHeigh, width: bounds.width, height: halfHeigh)
+        let height = bounds.height / 4
+        let yHeight = bounds.height
+        return CGRect(x: 0, y: yHeight - height, width: bounds.width, height: height)
     }
     
     override func presentationTransitionWillBegin() {
@@ -24,5 +25,14 @@ class PresentationController: UIPresentationController {
     override func containerViewDidLayoutSubviews() {
         super.containerViewDidLayoutSubviews()
         presentedView?.frame = frameOfPresentedViewInContainerView
+    }
+    
+    var driver: TransitionDriver!
+    
+    override func presentationTransitionDidEnd(_ completed: Bool) {
+        super.presentationTransitionDidEnd(completed)
+        if completed {
+            driver.direction = .dismiss
+        }
     }
 }
