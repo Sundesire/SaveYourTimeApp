@@ -22,18 +22,16 @@ class TaskViewController: UIViewController {
     
     var taskManager: TaskManager!
     
+    
     private let transition = PanelTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationItem.largeTitleDisplayMode = .always
-        view.backgroundColor = #colorLiteral(red: 0.152451545, green: 0.1685512364, blue: 0.1769267023, alpha: 1)
         tableView.backgroundColor = .clear
         taskManager = TaskManager()
-        tableView.backgroundColor = .clear
+        
         getTask { (task) in
-            print("sucess")
+
         }
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -73,38 +71,17 @@ class TaskViewController: UIViewController {
 
 extension TaskViewController {
     func setUpNavigationBar() {
-        //NavigationBar
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1)
-        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(cgColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1))]
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(cgColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1))]
-        
         //NavigationTitle
         let currentDate = Date()
         let date = dateFormatter.string(from: currentDate)
-        self.title = date
-        
-        //NavigationSearchBar
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.placeholder = "Поиск"
-        searchController.searchBar.tintColor = #colorLiteral(red: 0, green: 0.8620880246, blue: 0.7615700364, alpha: 1)
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = true
-        
+        navigationItem.title = date
+
         //NavigationButton
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createTaskTapped))
         let exitButton = UIBarButtonItem(title: "Выйти", style: .plain, target: self, action: #selector(exitFromApp))
-        addButton.tintColor = #colorLiteral(red: 0, green: 0.8620880246, blue: 0.7615700364, alpha: 1)
         exitButton.tintColor = #colorLiteral(red: 0, green: 0.8620880246, blue: 0.7615700364, alpha: 1)
-        self.navigationItem.rightBarButtonItem = addButton
         self.navigationItem.leftBarButtonItem = exitButton
     }
-    
-    @objc func createTaskTapped() {
-        guard let newVC = storyboard?.instantiateViewController(withIdentifier: "createTaskViewController") as? CreateTaskViewController else { return }
-        newVC.taskManager = self.taskManager
-        navigationController?.pushViewController(newVC, animated: true)
-    }
+
     
     @objc func exitFromApp() {
         do {
@@ -114,17 +91,6 @@ extension TaskViewController {
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
-    }
-}
-
-extension TaskViewController {
-    
-    func openModalWindow(task: Task) {
-        let child = TaskInfoViewController()
-        child.transitioningDelegate = transition
-        child.modalPresentationStyle = .custom
-        child.taskLabel.text = task.task
-        present(child, animated: true)
     }
 }
 
@@ -142,15 +108,26 @@ extension TaskViewController: UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let task = createTask(indexPath: indexPath)
-        openModalWindow(task: task)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let task = createTask(indexPath: indexPath)
+//        openModalWindow(task: task)
+//    }
     
     func createTask(indexPath: IndexPath) -> Task {
         guard let taskManager = taskManager else { fatalError() }
         let task: Task
         task = taskManager.task(at: indexPath.row)
         return task
+    }
+}
+
+extension TaskViewController {
+    
+    func openModalWindow(task: Task) {
+        let child = TaskInfoViewController()
+        child.transitioningDelegate = transition
+        child.modalPresentationStyle = .custom
+        child.taskLabel.text = task.task
+        present(child, animated: true)
     }
 }

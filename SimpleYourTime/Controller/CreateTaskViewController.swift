@@ -26,53 +26,46 @@ class CreateTaskViewController: UIViewController {
     let picker = UIPickerView()
     
     var dateFrom: Date?
+    var notification: CreateNotificationProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.152451545, green: 0.1685512364, blue: 0.1769267023, alpha: 1)
+        taskTF.attributedPlaceholder = NSAttributedString(string: "Новая задача", attributes: [.foregroundColor: UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 0.7023820936))])
+        categoryTF.attributedPlaceholder = NSAttributedString(string: "Категория", attributes: [.foregroundColor: UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 0.7023820936))])
+        timeFromTF.attributedPlaceholder = NSAttributedString(string: "12:00", attributes: [.foregroundColor: UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 0.7023820936))])
+        timeToTF.attributedPlaceholder = NSAttributedString(string: "14:00", attributes: [.foregroundColor: UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 0.7023820936))])
         
-        setUpNavigationBar()
-        startSettings()
+        taskManager = TaskManager()
         showDatePicker()
         showPickerView()
     }
     
-    func createNotification(task: String, dateFrom: Date) {
-        let notificationCenter = UNUserNotificationCenter.current()
-        let content = UNMutableNotificationContent()
-        content.title = "Напоминание!"
-        content.subtitle = "Напоминание о задаче"
-        content.body = "Пора выполнить задачу: \(task)"
-        content.sound = UNNotificationSound.default
-        content.threadIdentifier = "local-notification temp"
-        content.badge = 1
-        
-        let date = dateFrom
-        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-        let request = UNNotificationRequest(identifier: "content", content: content, trigger: trigger)
-        
-        notificationCenter.add(request) { (error) in
-            if error != nil {
-                print(error?.localizedDescription)
-            }
-        }
-    }
-    
     @IBAction func SaveButton(_ sender: UIButton) {
+
+        guard taskTF.text != "",
+            categoryTF.text != "",
+            timeFromTF.text != "",
+            timeToTF.text != "" else {
+                return
+        }
         
+        guard let task = taskTF.text,
+            let category = categoryTF.text,
+            let timeFrom = timeFromTF.text,
+            let timeTo = timeToTF.text else {
+                return
+        }
         
-        guard taskTF.text != "", categoryTF.text != "", timeFromTF.text != "", timeToTF.text != "" else { return }
-        guard let task = taskTF.text, let category = categoryTF.text, let timeFrom = timeFromTF.text, let timeTo = timeToTF.text else { return }
         let newTask = Task(task: task, category: category, dateFrom: timeFrom, dateTo: timeTo)
         self.taskManager.add(task: newTask)
         saveToFirebase(task: newTask)
+
         
-        print(newTask)
-        
+        notification = CreateNotification()
         if notificationSwitch.isOn {
             print("Notification on")
-            createNotification(task: task, dateFrom: dateFrom!)
+            notification.createNotification(task: task, dateFrom: dateFrom!)
         } else {
             print("Notification off")
         }
@@ -85,52 +78,25 @@ class CreateTaskViewController: UIViewController {
     func saveToFirebase(task: Task) {
         let db = Firestore.firestore()
         let id = Auth.auth().currentUser?.uid
-        
-        db.collection("users").document(id!).collection("tasks").addDocument(data:[
+        let index = "0"
+
+        db.collection("users").document(id!).collection("tasks").document(index).setData([
             "task": task.task,
             "category": task.category,
             "timeFrom": task.dateFrom,
             "timeTo": task.dateTo
-            ]) { error in
-                if let error = error {
-                    print("Error writing document: \(error)")
-                } else {
-                    print("Document successfully written!")
-                }
+        ]) { error in
+            if let error = error {
+                print("Error writing document: \(error)")
+            } else {
+                print("Document successfully written!")
+            }
         }
-        
-        
     }
     
 }
 
 extension CreateTaskViewController {
-    func setTextField(textField: UITextField, tintColor: UIColor, backgroundColor: UIColor, textColor: UIColor, placeholder: String) {
-        textField.tintColor = tintColor
-        textField.backgroundColor = backgroundColor
-        textField.textColor = textColor
-        textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: UIColor.init(cgColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 0.7023820936))])
-        textField.autocapitalizationType = .sentences
-    }
-    
-    func startSettings() {
-        setTextField(textField: taskTF, tintColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1), backgroundColor: #colorLiteral(red: 0.152451545, green: 0.1685512364, blue: 0.1769267023, alpha: 1), textColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1), placeholder: "Новая задача")
-        setTextField(textField: categoryTF, tintColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1), backgroundColor: #colorLiteral(red: 0.152451545, green: 0.1685512364, blue: 0.1769267023, alpha: 1), textColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1), placeholder: "Категория")
-        setTextField(textField: timeFromTF, tintColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1), backgroundColor: #colorLiteral(red: 0.152451545, green: 0.1685512364, blue: 0.1769267023, alpha: 1), textColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1), placeholder: "12:00")
-        setTextField(textField: timeToTF, tintColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1), backgroundColor: #colorLiteral(red: 0.152451545, green: 0.1685512364, blue: 0.1769267023, alpha: 1), textColor: #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1), placeholder: "14:00")
-        
-        saveButton.backgroundColor = #colorLiteral(red: 0, green: 0.8588235294, blue: 0.7607843137, alpha: 1)
-        saveButton.setTitle("Сохранить", for: .normal)
-        saveButton.setTitleColor(#colorLiteral(red: 0.152451545, green: 0.1685512364, blue: 0.1769267023, alpha: 1), for: .normal)
-        saveButton.layer.cornerRadius = saveButton.frame.height / 2
-    }
-    
-    func setUpNavigationBar() {
-        //NavigationTitle
-        self.title = "Новая задача"
-        navigationController?.navigationBar.backItem?.backBarButtonItem?.tintColor = #colorLiteral(red: 0, green: 0.8620880246, blue: 0.7615700364, alpha: 1)
-        
-    }
     
     func setToolbar() -> UIToolbar{
         let toolbar = UIToolbar()

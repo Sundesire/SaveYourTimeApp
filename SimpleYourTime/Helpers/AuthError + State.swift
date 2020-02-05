@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum AuthState {
+    case login
+    case register
+}
+
 enum AuthError {
     case notFilled
     case invalidEmail

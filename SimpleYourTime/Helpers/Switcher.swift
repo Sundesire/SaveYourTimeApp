@@ -16,8 +16,9 @@ class Switcher {
         print(status)
         
         if status == true {
-            let taskVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "taskViewController") as? TaskViewController
-            rootVC = UINavigationController(rootViewController: taskVC!)
+//            let taskVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "taskViewController") as? TaskViewController
+//            rootVC = UINavigationController(rootViewController: taskVC!)
+            rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarController")
         } else {
             rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "authViewController") as? AuthViewController
         }

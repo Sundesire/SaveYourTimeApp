@@ -84,30 +84,47 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6LY-cp-cjI">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.25882352939999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="alM-vA-l8V">
                                         <rect key="frame" x="0.0" y="53" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.25882352939999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JOJ-vJ-6JX">
                                         <rect key="frame" x="0.0" y="106" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.25882352939999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sGo-lq-W9V">
                                         <rect key="frame" x="0.0" y="159" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.25882352939999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gp5-Bd-tT4">
                                         <rect key="frame" x="0.0" y="212" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="7LO-uq-Soj"/>
                                         </constraints>
-                                        <state key="normal" title="Зарегестрироваться"/>
+                                        <color key="tintColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Зарегестрироваться">
+                                            <color key="titleColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="registerButtonTapped:" destination="ZBY-5r-GjP" eventType="touchUpInside" id="ddY-Ks-3Ux"/>
                                         </connections>
@@ -121,7 +138,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8ck-BU-HCM" firstAttribute="top" secondItem="2UB-qi-sEE" secondAttribute="top" constant="28" id="58B-MI-D4A"/>
                             <constraint firstItem="2UB-qi-sEE" firstAttribute="trailing" secondItem="8ck-BU-HCM" secondAttribute="trailing" constant="20" id="9uG-gO-GLm"/>
@@ -153,22 +170,33 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cJQ-qz-PxK">
                                 <rect key="frame" x="20" y="28" width="374" height="151"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGX-Vl-lZa">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGX-Vl-lZa">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.25882352939999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gkW-5l-oyb">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gkW-5l-oyb">
                                         <rect key="frame" x="0.0" y="53" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.25882352939999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRA-zm-RwZ">
                                         <rect key="frame" x="0.0" y="106" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Qyk-7r-Vm2"/>
                                         </constraints>
-                                        <state key="normal" title="Войти"/>
+                                        <color key="tintColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Войти">
+                                            <color key="titleColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginButtonTapped:" destination="ayI-F2-TwY" eventType="touchUpInside" id="2BT-74-Bnn"/>
                                             <action selector="registerButtonTapped:" destination="ZBY-5r-GjP" eventType="touchUpInside" id="sgy-JG-6uW"/>
@@ -181,7 +209,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Rpj-Ir-s0f" firstAttribute="trailing" secondItem="cJQ-qz-PxK" secondAttribute="trailing" constant="20" id="1jj-9J-APv"/>
                             <constraint firstItem="cJQ-qz-PxK" firstAttribute="top" secondItem="Rpj-Ir-s0f" secondAttribute="top" constant="28" id="LlI-lh-eMV"/>
@@ -221,30 +249,50 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKu-Qu-Qd7">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="uxi-XV-rfa"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Войти">
+                                            <color key="titleColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="loginButtonTapped:" destination="AqE-SD-2WL" eventType="touchUpInside" id="lB4-FL-QRF"/>
                                             <segue destination="ayI-F2-TwY" kind="show" id="d38-V8-hPZ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4q-C7-b6G">
                                         <rect key="frame" x="0.0" y="48" width="374" height="40"/>
+                                        <color key="backgroundColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="2M6-Dw-Vru"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Зарегестрироваться">
+                                            <color key="titleColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="registerButtonTapped:" destination="AqE-SD-2WL" eventType="touchUpInside" id="nKL-0n-9Ta"/>
                                             <segue destination="ZBY-5r-GjP" kind="show" id="XRn-Qd-1nn"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gUh-IV-4Rg" firstAttribute="trailing" secondItem="8ar-WA-pX6" secondAttribute="trailing" constant="20" id="2lh-fS-rOp"/>
                             <constraint firstItem="8ar-WA-pX6" firstAttribute="leading" secondItem="gUh-IV-4Rg" secondAttribute="leading" constant="20" id="M0k-e2-f4I"/>
@@ -260,9 +308,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5D-XX-iCS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="339.13043478260875" y="115.84821428571428"/>
+            <point key="canvasLocation" x="330" y="116"/>
         </scene>
-        <!--Задачи-->
+        <!--Сегодня-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="taskViewController" id="BYZ-38-t0r" customClass="TaskViewController" customModule="SimpleYourTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -271,8 +319,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wRd-uP-b4O">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" rowHeight="100" id="hON-x1-xxQ" customClass="TasksTableViewCell" customModule="SimpleYourTime" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
@@ -296,7 +344,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVX-Ct-GAP">
                                                                     <rect key="frame" x="0.0" y="31" width="82.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -307,13 +355,13 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="С 12:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qte-TG-Zv3">
                                                                     <rect key="frame" x="0.0" y="0.0" width="73.5" height="21.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="1" green="0.35106903309999998" blue="0.33026069400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="До 12:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyV-LD-KVd">
                                                                     <rect key="frame" x="0.0" y="30.5" width="73.5" height="21.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="1" green="0.35106903309999998" blue="0.33026069400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -360,26 +408,31 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wRd-uP-b4O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TvB-oc-Aem"/>
-                            <constraint firstItem="wRd-uP-b4O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XMW-jK-H3U"/>
-                            <constraint firstItem="wRd-uP-b4O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c00-6X-fLw"/>
-                            <constraint firstItem="wRd-uP-b4O" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qJy-Bq-6gP"/>
+                            <constraint firstItem="wRd-uP-b4O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tvf-vC-rxL"/>
+                            <constraint firstItem="wRd-uP-b4O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="svu-PV-lTT"/>
+                            <constraint firstItem="wRd-uP-b4O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uO0-eP-dRM"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="wRd-uP-b4O" secondAttribute="bottom" constant="-49" id="xKQ-1q-xRC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Задачи" image="TasksIcon" selectedImage="TasksIconColored" id="43O-Z1-I2a"/>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="p1i-nd-JRb"/>
+                    <navigationItem key="navigationItem" title="Сегодня" largeTitleDisplayMode="always" id="p1i-nd-JRb">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="C28-Cs-yJZ">
+                            <connections>
+                                <segue destination="Wo3-hF-7hu" kind="show" id="T90-Lc-uAg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="wRd-uP-b4O" id="atJ-Z3-zYW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3275" y="-172"/>
+            <point key="canvasLocation" x="4182.608695652174" y="-181.47321428571428"/>
         </scene>
-        <!--Create Task View Controller-->
+        <!--Новая задача-->
         <scene sceneID="c27-eb-cjJ">
             <objects>
                 <viewController storyboardIdentifier="createTaskViewController" id="Wo3-hF-7hu" customClass="CreateTaskViewController" customModule="SimpleYourTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -388,37 +441,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6mm-02-LtH">
-                                <rect key="frame" x="20" y="72" width="374" height="310"/>
+                                <rect key="frame" x="20" y="116" width="374" height="310"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PxL-P0-mDv">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Новая задача" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PxL-P0-mDv">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.25882352939999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="9Wl-xw-6OB"/>
                                         </constraints>
+                                        <color key="textColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ovp-fI-63A">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Категория" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ovp-fI-63A">
                                         <rect key="frame" x="0.0" y="53" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.25882352939999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Kty-xN-qma"/>
                                         </constraints>
+                                        <color key="textColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXy-EA-Il2">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="12:00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXy-EA-Il2">
                                         <rect key="frame" x="0.0" y="106" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.25882352939999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="qAv-Ek-j38"/>
                                         </constraints>
+                                        <color key="textColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a4w-Lk-2OD">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="14:00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a4w-Lk-2OD">
                                         <rect key="frame" x="0.0" y="159" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.25882352939999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="oxu-XF-7zx"/>
                                         </constraints>
+                                        <color key="textColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -437,16 +502,24 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwn-Mz-Era">
                                                 <rect key="frame" x="325" y="7" width="51" height="31"/>
                                                 <color key="onTintColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="thumbTintColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" red="0.23529411759999999" green="0.25882352939999997" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOO-O3-YW3">
                                         <rect key="frame" x="0.0" y="265" width="374" height="45"/>
+                                        <color key="backgroundColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Qu7-hG-3Zj"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Сохранить">
+                                            <color key="titleColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="SaveButton:" destination="Wo3-hF-7hu" eventType="touchUpInside" id="deb-vV-aEV"/>
                                         </connections>
@@ -457,7 +530,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6mm-02-LtH" firstAttribute="leading" secondItem="iDf-ZI-Lqp" secondAttribute="leading" constant="20" id="0I7-BE-Kg9"/>
                             <constraint firstItem="iDf-ZI-Lqp" firstAttribute="trailing" secondItem="6mm-02-LtH" secondAttribute="trailing" constant="20" id="P8m-6G-Ld2"/>
@@ -465,6 +538,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iDf-ZI-Lqp"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Новая задача" largeTitleDisplayMode="never" id="cV6-2G-9Rw"/>
                     <connections>
                         <outlet property="categoryTF" destination="Ovp-fI-63A" id="FR0-gB-c1S"/>
                         <outlet property="notificationSwitch" destination="hwn-Mz-Era" id="87H-aW-Hbf"/>
@@ -476,21 +550,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgQ-qY-xj2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4125" y="-172"/>
+            <point key="canvasLocation" x="5157" y="-181"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BxF-ej-9DR">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QU8-uY-WSl" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="QU8-uY-WSl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DIu-kT-1dr">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="w8N-Eb-oCG"/>
-                        <segue destination="cZb-VJ-tGA" kind="relationship" relationship="viewControllers" id="Zrx-gJ-wMs"/>
+                        <segue destination="gfr-SY-0RX" kind="relationship" relationship="viewControllers" id="xag-9i-Lj6"/>
+                        <segue destination="eTN-gr-RgM" kind="relationship" relationship="viewControllers" id="Zrx-gJ-wMs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbD-JF-HPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -504,14 +580,69 @@
                     <view key="view" contentMode="scaleToFill" id="OOS-nd-PBj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Q9M-SY-1EW"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Настройки" image="SettingsIcon" selectedImage="SettingsIconColored" id="uUq-5k-IWz"/>
+                    <navigationItem key="navigationItem" title="Настройки" id="6nY-eP-aZh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vr-5V-13H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3274" y="477"/>
+            <point key="canvasLocation" x="4184.057971014493" y="476.78571428571428"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="u2I-99-B6Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eTN-gr-RgM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Настройки" image="SettingsIcon" selectedImage="SettingsIconColored" id="uUq-5k-IWz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="ARP-J6-LI5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cZb-VJ-tGA" kind="relationship" relationship="rootViewController" id="98i-NW-dRl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3wT-vp-pdP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3273.913043478261" y="476.78571428571428"/>
+        </scene>
+        <!--Задачи-->
+        <scene sceneID="6Ob-ab-E4l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gfr-SY-0RX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Задачи" image="TasksIcon" selectedImage="TasksIconColored" id="8Op-Q9-vNx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="RdJ-ph-dII">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.15245154499999999" green="0.1685512364" blue="0.17692670229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.85882352939999995" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="j7Z-xs-ZCJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVq-3z-avh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3274" y="-181"/>
         </scene>
     </scenes>
     <resources>
@@ -519,5 +650,6 @@
         <image name="SettingsIconColored" width="27" height="27"/>
         <image name="TasksIcon" width="25" height="25"/>
         <image name="TasksIconColored" width="25" height="25"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>
