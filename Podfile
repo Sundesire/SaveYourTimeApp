@@ -6,8 +6,5 @@ target 'SimpleYourTime' do
   use_frameworks!
 
   # Pods for SimpleYourTime
-	pod 'Firebase/Analytics'
-	pod 'Firebase/Auth'
-	pod 'Firebase/Firestore'
-	pod 'Firebase/Database'
+	pod 'Realm'
 end

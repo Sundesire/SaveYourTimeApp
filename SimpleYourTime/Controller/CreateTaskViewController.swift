@@ -8,7 +8,6 @@
 
 import UIKit
 import UserNotifications
-import Firebase
 
 class CreateTaskViewController: UIViewController {
     
@@ -59,7 +58,6 @@ class CreateTaskViewController: UIViewController {
         
         let newTask = Task(task: task, category: category, dateFrom: timeFrom, dateTo: timeTo)
         self.taskManager.add(task: newTask)
-        saveToFirebase(task: newTask)
 
         
         notification = CreateNotification()
@@ -74,25 +72,7 @@ class CreateTaskViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
-    
-    func saveToFirebase(task: Task) {
-        let db = Firestore.firestore()
-        let id = Auth.auth().currentUser?.uid
-        let index = "0"
 
-        db.collection("users").document(id!).collection("tasks").document(index).setData([
-            "task": task.task,
-            "category": task.category,
-            "timeFrom": task.dateFrom,
-            "timeTo": task.dateTo
-        ]) { error in
-            if let error = error {
-                print("Error writing document: \(error)")
-            } else {
-                print("Document successfully written!")
-            }
-        }
-    }
     
 }
 

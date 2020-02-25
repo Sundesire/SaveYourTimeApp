@@ -9,7 +9,7 @@
 import Foundation
 
 class TaskManager {
-    var tasks: [Task] = []
+    var tasks: [Task] = [Task(task: "Переделать проект", category: Category[1], dateFrom: "09:00", dateTo: "16:00")]
     
     var category = ["Дом", "Работа", "Хобби", "Отдых", "Семья", "Здоровье", "Спорт"]
     
